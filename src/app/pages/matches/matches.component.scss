@@ -1,0 +1,17 @@
+.card {
+    margin: 1rem 0;
+}
+
+.fixture {
+    &-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 20%;
+        p {
+            margin: 0.2rem;
+        }
+    }
+}

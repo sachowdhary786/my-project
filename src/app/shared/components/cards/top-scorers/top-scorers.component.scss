@@ -1,0 +1,51 @@
+.top-scorers {
+    &-container {
+        border-radius: 2rem;
+        max-width: 600px;
+        padding: 1rem 0;
+        margin: 0 auto;
+
+        h3 {
+            color: white;
+        }
+    }
+
+    &-card {
+        border-radius: 0;
+        padding: 1rem 0;
+        overflow: hidden;
+
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+
+        &:first-of-type {
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+        }
+
+        &:last-of-type {
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+
+        &-left {
+            display: flex;
+            gap: 2rem;
+            justify-content: space-between;
+            margin: 0 3rem;
+        }
+
+        &-right {
+            display: flex;
+            margin: 0 3rem;
+        }
+    }
+}
+
+.router-link {
+    &-card {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}

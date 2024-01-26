@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    padding: 0;
+    // background: black;
+    overflow-x: hidden;
+}
+
+.card {
+    margin: 0 auto;
+    display: flex;
+    flex: auto;
+    justify-content: space-evenly;
+    min-width: 600px;
+    max-width: 600px;
+
+    background: #2d2d2d;
+    border-radius: 1rem;
+    border: 2px solid var(--gray-900);
+
+    color: white;
+    font-weight: 600;
+
+    .fixture_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .time {
+            font-size: 20px;
+            margin-bottom: 0;
+        }
+        .day {
+            font-size: 12px;
+            font-weight: 300;
+        }
+    }
+
+    .team {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 33%;
+        margin: 1em;
+
+        text-align: center;
+
+
+        img {
+            height: 50px;
+            width: 50px;
+        }
+
+        p {
+            margin: 1em 0 0 0; 
+        }
+    }
+}

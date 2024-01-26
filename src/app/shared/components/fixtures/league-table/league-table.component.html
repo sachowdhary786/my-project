@@ -1,0 +1,22 @@
+<div *ngIf="mergedArray.length > 0">
+    <table>
+        <thead>
+            <tr>
+                <th>Pos</th>
+                <th>Team</th>
+                <th>Points</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of mergedArray">
+                <td>{{item.position}}</td>
+                <td><img src="{{ item.image_path }}" alt="{{ item.name }} Logo" width="50" height="50"></td>
+                <td>{{item.points}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div *ngIf="mergedArray.length === 0">
+    <!-- Show message if no data is available -->
+    No data available.
+</div>

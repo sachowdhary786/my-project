@@ -1,0 +1,33 @@
+<div class="next-match-container">
+    <h3>Next Match</h3>
+    <div class="next-match-card card" *ngIf="nextFixture">
+        <div class="team">
+            <img src="{{nextFixture.participants[0].image_path}}" />
+            <p>{{nextFixture.participants[0].name}}</p>
+        </div>
+        <div class="fixture-info">
+            <p class="time">{{hour}}:{{minutes}} </p>
+            <p class="day">{{day}} {{month}}</p>
+        </div>
+        <div class="team">
+            <img src="{{nextFixture.participants[1].image_path}}" />
+            <p>{{nextFixture.participants[1].name}}</p>
+        </div>
+    </div>
+</div>
+
+<div class="prev-five-container">
+    <h3>Last 5 Matches</h3>
+    <div class="prev-five-cards-container">
+        <div class="prev-five-card card" *ngFor="let team of prevFiveFinal">
+            <div class="team">
+                <img src="{{team.homeLogo}}" />
+                <p class="teamGoals">{{team.homeGoals}}</p>
+            </div>
+            <div class="team">
+                <img src="{{team.awayLogo}}" />
+                <p class="teamGoals">{{team.awayGoals}}</p>
+            </div>
+        </div>
+    </div>
+</div>

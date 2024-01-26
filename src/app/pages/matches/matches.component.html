@@ -1,0 +1,44 @@
+<ui-tabs>
+    <ui-tab-item [tabName]="tab1" [templateRef]="firstTemplate"></ui-tab-item>
+    <ui-tab-item [tabName]="tab2" [templateRef]="secondTemplate"></ui-tab-item>
+</ui-tabs>
+
+<div class="container">
+    <ng-template #firstTemplate>
+        <div *ngFor="let result of results">
+            <div class="results-card card">
+                <div class="team">
+                    <img src="{{result.homeLogo}}" />
+                    <p class="teamGoals">{{result.homeGoals}}</p>
+                </div>
+                <div class="fixture-info">
+                    <p class="result">{{result.result}}</p>
+                </div>
+                <div class="team">
+                    <img src="{{result.awayLogo}}" />
+                    <p class="teamGoals">{{result.awayGoals}}</p>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+
+    <ng-template #secondTemplate>
+        <div class="fixture-card card" *ngFor="let fixture of fixtureCards">
+            <div class="team">
+                <img src="{{fixture.participants[0].image_path}}" />
+                <p>{{fixture.participants[0].name}}</p>
+            </div>
+            <div class="fixture-info">
+                <p class="time">{{fixture.starting_at | date: 'HH'}}: {{fixture.starting_at | date: 'mm'}}</p>
+                <p class="day">
+                    {{fixture.starting_at | date: 'dd'}}
+                    {{fixture.starting_at | date: 'LLL'}}
+                </p>
+            </div>
+            <div class="team">
+                <img src="{{fixture.participants[1].image_path}}" />
+                <p>{{fixture.participants[1].name}}</p>
+            </div>
+        </div>
+    </ng-template>
+</div>

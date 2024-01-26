@@ -1,0 +1,37 @@
+.tabs {
+    &-container {
+        max-width: 600px;
+        margin: 1rem auto;
+    }
+    display: flex;
+    align-items: center;
+    height: 50px;
+    position: relative;
+    margin: 1rem 0;
+    gap: 1rem;
+
+    &-item {
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+        user-select: none;
+        background: black;
+        border: 1px solid white;
+        border-radius: 1rem;
+        padding: 0.5rem 1rem;
+
+        &.active {
+            background: white;
+            color: black;
+        }
+
+        &:hover {
+            background-color: #eee;
+        }
+
+        &:not(.active):hover {
+            border-bottom: 3px solid #ccc;
+            padding-bottom: 7px;
+        }
+    }
+}

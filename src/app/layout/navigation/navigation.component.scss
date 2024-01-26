@@ -1,0 +1,25 @@
+nav {
+    display: flex;
+    margin: 0 auto;
+    padding: 0 2rem;
+    max-width: 600px;
+    overflow-x: scroll;
+    justify-content: center;
+
+    a {
+        padding: 1rem;
+        cursor: pointer;
+        color: #2d2d2d;
+        font-weight: 600;
+        font-size: 24px;
+        text-decoration: none;
+
+        :visited {
+            color: red;
+        }
+
+        &.active {
+            color: orange;
+        }
+    }
+}

@@ -1,0 +1,96 @@
+.next-match {
+    &-container {
+        border-radius: 2rem;
+        max-width: 600px;
+        padding: 1rem 0;
+        margin: 0 auto;
+
+        h3 {
+            color: white;
+        }
+    }
+    &-card {
+        margin: 0 auto;
+        display: flex;
+        flex: auto;
+        justify-content: space-evenly;
+        min-width: 600px;
+        max-width: 600px;
+
+        background: black;
+        border-radius: 1rem;
+        border: 2px solid var(--gray-900);
+
+        color: white;
+        font-weight: 600;
+
+        .fixture-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .time {
+                font-size: 20px;
+                margin-bottom: 0;
+            }
+
+            .day {
+                font-size: 12px;
+                font-weight: 300;
+            }
+        }
+
+        .team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 33%;
+            margin: 1em;
+
+            text-align: center;
+
+
+            img {
+                height: 50px;
+                width: 50px;
+            }
+
+            p {
+                margin: 1em 0 0 0;
+            }
+        }
+    }
+}
+
+.prev-five {
+    &-container {
+        border-radius: 2rem;
+        max-width: 600px;
+        padding: 1rem 0;
+        margin: 0 auto;
+
+        h3 {
+            color: white;
+        }
+    }
+
+    &-cards-container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        max-width: 600px;
+        margin: 2rem auto;
+        gap: 2rem;
+    }
+
+    &-card {
+        min-width: 40%;
+
+        .team {
+            &Name {
+                margin: 0 0.5rem;
+            }
+        }
+    }
+}

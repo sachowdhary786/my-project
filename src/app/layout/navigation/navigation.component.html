@@ -1,0 +1,9 @@
+<nav>
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+    <a routerLink="/matches" routerLinkActive="active">Matches</a>
+    <a routerLink="/squad" routerLinkActive="active">Squad</a>
+</nav>
+
+<div [@routeAnimations]="getRouteAnimationData()">
+    <router-outlet></router-outlet>
+</div>

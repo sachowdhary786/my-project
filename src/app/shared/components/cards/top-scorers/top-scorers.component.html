@@ -1,0 +1,15 @@
+<div class="top-scorers-container">
+    <h3>Top Scorers</h3>
+    <div class="top-scorers-card card" *ngFor="let scorer of goalScorers | slice:0:5; index as i">
+        <div class="top-scorers-card-left">
+            <div>{{i + 1}} </div>
+            <div> {{scorer[0]}}</div>
+        </div>
+        <div class="top-scorers-card-right">
+            {{scorer[1]}}
+        </div>
+    </div>
+    <div class="router-link-card card" routerLink="">
+        <p>See All</p>
+    </div>
+</div>

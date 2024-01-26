@@ -1,0 +1,11 @@
+<div class="squad-card card" *ngIf="players">
+    <span class="squad-card-number">{{players.jersey_number}}</span>
+    <span class="squad-card-details">
+        {{playerDetails[index]?.data?.display_name}}
+        <span>
+            {{countryData[index] | json}}
+            <img [src]="countryData[index]?.data?.image_path" [alt]="playerDetails[index]?.data?.display_name" class="squad-card-flag" />
+            <p>{{players.countryName}}</p>
+        </span>
+    </span>
+</div>
